@@ -1,0 +1,35 @@
+{
+  "name": "vue-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sishenhei7/vue-blog.git",
+  "author": "杨舟 <yangzhou@yimian.com.cn>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "lint": "prettier --write 'docs/**/*.md'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "git add . && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "preserve": "never"
+  },
+  "devDependencies": {
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "prettier": "^1.17.0",
+    "vuepress": "^0.14.11"
+  }
+}
