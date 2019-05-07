@@ -38,6 +38,10 @@ function genNav() {
     {
       text: '博客',
       link: '/blog/'
+    },
+    {
+      text: '配置',
+      link: '/config/'
     }
   ]
 }
@@ -47,6 +51,7 @@ function genBlogConfig() {
     {
       title: 'blog',
       collapsable: true,
+      displayAllHeaders: true,
       children: ['', 'frontEnd', 'reading']
     }
   ]
