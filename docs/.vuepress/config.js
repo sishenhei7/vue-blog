@@ -1,4 +1,5 @@
 module.exports = {
+  base: 'vue-blog',
   title: 'Candybullet',
   description: '123',
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
