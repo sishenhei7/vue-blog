@@ -1,7 +1,7 @@
 module.exports = {
   base: '/vue-blog/',
   title: 'Candybullet',
-  description: '123',
+  description: 'blog',
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   themeConfig: {
     nav: genNav(),
