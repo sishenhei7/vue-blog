@@ -6,7 +6,8 @@ module.exports = {
   themeConfig: {
     nav: genNav(),
     sidebar: {
-      '/blog/': genBlogConfig()
+      '/blog/': genBlogConfig(),
+      '/share/': genShareConfig()
     },
     lastUpdated: '上次更新',
     repo: 'sishenhei7/vue-blog',
@@ -42,6 +43,10 @@ function genNav() {
       link: '/blog/'
     },
     {
+      text: '分享',
+      link: '/share/'
+    },
+    {
       text: '配置',
       link: '/config/'
     }
@@ -55,6 +60,17 @@ function genBlogConfig() {
       collapsable: true,
       displayAllHeaders: true,
       children: ['', 'frontEnd', 'reading']
+    }
+  ]
+}
+
+function genShareConfig() {
+  return [
+    {
+      title: 'share',
+      collapsable: true,
+      displayAllHeaders: true,
+      children: ['', 'pwa']
     }
   ]
 }
