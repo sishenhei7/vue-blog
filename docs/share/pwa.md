@@ -149,7 +149,7 @@ manifest 文件控制了**当 web app 安装到移动端的时候，应该怎么
 5. **NetworkOnly(仅网络)**：只从网络获取，若没有则报错。
 
 ::: warning Vue 官方文档的刷新小窗原理
-`workbox.js` 自己实现了很多钩子，其中就有`update`钩子，这是专门针对**StaleWhileRevalidate**所做的钩子，因为这个缓存策略在使用缓存的时候，同时也会发出网络请求，请求最新数据，当所有的数据请求完成之后，它会判断新的缓存和旧的缓存是否有变动，如果有的话，就广播 update 事件。然后 Vue 官方文档监听了 update 事件，如果监听到了，就弹出小窗让我们刷新。
+`workbox.js` 自己实现了很多钩子，其中就有`update`钩子(详细见文档[What is Broadcast Update?](https://developers.google.com/web/tools/workbox/modules/workbox-broadcast-update?hl=en))，这是专门针对**StaleWhileRevalidate**所做的钩子，因为这个缓存策略在使用缓存的时候，同时也会发出网络请求，请求最新数据，当所有的数据请求完成之后，它会判断新的缓存和旧的缓存是否有变动，如果有的话，就广播 update 事件。然后 Vue 官方文档监听了 update 事件，如果监听到了，就弹出小窗让我们刷新。
 :::
 
 ::: warning 官方插件
