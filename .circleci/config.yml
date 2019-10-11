@@ -42,8 +42,5 @@ jobs:
           command: sh deploy-circleci.sh
       - run:
           name: deploy-netlify
-          command: |
-            git checkout netlify
-            git merge master
-            git push
+          command: sh deploy-netlify.sh
 
