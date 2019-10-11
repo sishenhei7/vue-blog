@@ -21,10 +21,6 @@ jobs:
         only: master
 
     steps:
-      - add_ssh_keys:
-          fingerprints:
-          - "4c:e3:f3:fb:ae:0e:7c:e1:50:84:f5:a2:70:10:5f:61"
-
       - checkout
 
       # Download and cache dependencies
