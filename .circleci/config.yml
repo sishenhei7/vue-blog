@@ -5,6 +5,10 @@
 version: 2
 jobs:
   build:
+    branches:
+      only:
+          - master
+
     docker:
       # specify the version you desire here
       - image: circleci/node:latest
@@ -15,10 +19,6 @@ jobs:
       # - image: circleci/mongo:3.4.4
 
     # working_directory: ~/repo
-
-    filters:
-      branches:
-          only: master
 
     steps:
       - checkout
