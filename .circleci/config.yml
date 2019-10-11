@@ -37,4 +37,13 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: sh deploy-circleci.sh
+      - run:
+          name: deploy-circleci
+          command: sh deploy-circleci.sh
+      - run:
+          name: deploy-netlify
+          command: |
+            git checkout netlify
+            git merge master
+            git push
+
